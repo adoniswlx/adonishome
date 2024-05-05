@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <link href="https://fonts.googleapis.com/css2?family=Your+Chosen+Font&display=swap" rel="stylesheet">
+    <title>Happy Birthday to Yining</title>
+    <style>
+        body {
+            overflow: hidden;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            background-color: #f2f2f2;
+            font-family: 'Your Chosen Font', cursive;
+            animation: backgroundAnimation 5s infinite;
+        }
+
+        #snow-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: -1;
+        }
+
+        .snowflake {
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            background-color: #fff;
+            border-radius: 50%;
+            opacity: 0.8;
+            pointer-events: none;
+            animation: snowfall linear infinite;
+        }
+
+        @keyframes snowfall {
+            0% {
+                transform: translateY(-100%);
+            }
+            100% {
+                transform: translateY(100vh);
+            }
+        }
+
+        #slideshow {
+            width: 500px;
+            height: 300px;
+            position: relative;
+            overflow: hidden;
+            margin: 0 auto; /* 添加这行代码使其居中 */
+        }
+
+        #slideshow img {
+            max-width: 100%;
+            max-height: 100%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%); /* 居中对齐 */
+            opacity: 0;
+            transition: opacity 1s ease-in-out;
+        }
+
+        #slideshow img.active {
+            opacity: 1;
+        }
+
+        @keyframes backgroundAnimation {
+            0% {
+                background-color: #ffafbd;
+            }
+            50% {
+                background-color: #ffc3a0;
+            }
+            100% {
+                background-color: #ffa0bd;
+            }
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            text-align: center;
+            padding: 40px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            margin-bottom: 5px; /* 调整生日快乐标题和下面文字的间距 */
+        }
+
+        h1 {
+            color: #ff69b4;
+            font-size: 28px;
+            margin-bottom: 5px; /* 调整标题和图片之间的间距 */
+        }
+
+        img {
+            width: 200px;
+            border-radius: 50%;
+            margin: 1px 0px; /* 调整图片和下方文字之间的间距 */
+        }
+
+        p {
+            color: #333;
+            line-height: 1.5;
+            margin-bottom: 20px;
+        }
+
+        .fade-in {
+            opacity: 0;
+            animation: fadeInAnimation 2s forwards;
+        }
+
+        @keyframes fadeInAnimation {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+
+        #countdown {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .time {
+            font-size: 36px;
+            margin: 0 10px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            animation-fill-mode: forwards;
+        }
+
+        #days {
+            background-color: #f5f5f5;
+        }
+
+        #hours {
+            background-color: #e0e0e0;
+        }
+
+        #minutes {
+            background-color: #d5d5d5;
+        }
+
+        #seconds {
+            background-color: #cccccc;
+        }
+
+        .time span {
+            display: inline-block;
+            font-size: 14px;
+            margin-top: 5px;
+            color: #333;
+        }
+
+        .ribbon {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            overflow: hidden;
+        }
+
+        .ribbon:before,
+        .ribbon:after {
+            content: "";
+            position: absolute;
+            display: block;
+            width: 200px;
+            height: 200px;
+            background: linear-gradient(to bottom, #ff69b4, #ffc3a0, #ffafbd);
+            border-radius: 50%;
+            opacity: 0.6;
+            animation: ribbonAnimation 2s infinite;
+        }
+
+        .ribbon:before {
+            top: -100px;
+            left: -50px;
+        }
+
+        .ribbon:after {
+            top: -100px;
+            right: -50px;
+        }
+
+        /* 定义彩带动画 */
+        @keyframes ribbonAnimation {
+            0% {
+                transform: translate(0, 0) rotate(0);
+            }
+            100% {
+                transform: translate(-800px, -800px) rotate(360deg);
+            }
+        }
+    </style>
+</head>
+<body>
+<div id="snow-container"></div>
+
+<div class="fade-in">
+    <h1>Welcome to the world of 一宁</h1>
+    <p>After reading, remember to smile. Hahaha.</p>
+</div>
+
+<div class="container">
+    <h1>101010101010</h1>
+    <div id="slideshow">
+        <img src="11.jpg" alt="Image 1" class="active">
+        <img src="22.jpg" alt="Image 2">
+        <img src="33.jpg" alt="Image 3">
+    </div>
+    <p>今天是一组礼貌姐，前实践大组长，一人handle万千事的一宁的20岁生日</p>
+    <p>新的一岁继续做自己！和西瓜哥99！——麦扣</p>
+    <p>一宁，在专业方面真的真的很靠谱！一直对于我的问题耐心解答，超级超级棒！之前有一起散步，可能感觉到会有一点点小焦虑，但是，一定一定要相信自己，感觉一宁在沟通、能力各方面都超级优秀！！！六边形战士🫶relax～一切会水到渠成～～～生日快乐～迎接光辉灿烂的20岁！——小妹</p>
+    <p>一宁生日快乐！！是特别善良的大美女！我开玩笑在状态里发没钱吃不上饭了，只有一宁来关心我需不需要钱吃饭😭真的很感动！新的一年，祝一宁天天开心，心想事成，和qx 泥萌xql要多多发糖 ！——yc</p>
+    <p>20岁了欸…欢迎加入奔三大家庭！HHHHHHH
+无论承认与否，20岁确实开启了一个人生的一个新阶段。而再不久，你（们）也将离开闵行，获得前往市中心的车票。再见了！祝愿徐汇没有石楠花。说起来很佩服第一年，整个实践组的大小事情的安排统筹，实在是不容易。工作量让人心疼，工作成效让人敬佩，工作强人范姐辛苦了！
+最后，生日快乐！——不可爱</p>
+    <p>一宁平日快乐！！之前在我生日帖里你说羡慕我ee嘟，但是我想说，我也好羡慕一宁的温和坚定哇！一宁一定要好好享受自己的或i或e，享受自己的每一天喔～——小鲸鱼</p>
+    <p>一宁生日快乐！二十岁是人生最美的年纪，愿你可以在这个最好的年纪遇到最好的自己！——知名不具</p>
+    <p>值得纪念的时刻到啦！一直以来就觉得一宁是很会规划生活又很自律的人，能够发现生活中的各种美好、值得拥有最好最幸福的一切的超级好美女！恭喜二十岁！将来也要看到活力满满的一宁ψ(｀∇´)ψ！——tpl</p>
+    <p>认识一宁也快一年多了，可能除了去曲樟实践之外其他时间交集不多，但是一宁在我眼里一直是一个特别特别强大和开朗的向日葵，当然向日葵可能也有带着耳机在路上黯然神伤不回应打招呼的时候哈哈哈。恭喜你进入新的十年，也祝又长大一岁的你依然能自洽自信，超级超级好的一宁！——sanjin</p>
+   <p>新的一岁继续勇敢向前！——wyh</p>
+
+</div>
+
+<div id="countdown">
+    <div class="time" id="days"></div>
+    <div class="time" id="hours"></div>
+    <div class="time" id="minutes"></div>
+    <div class="time" id="seconds"></div>
+</div>
+
+<script>
+    // 设置生日日期（月从0开始计数）
+    const birthday = new Date("2024-05-09");
+
+    function updateCountdown() {
+        const now = new Date();
+        const difference = birthday - now;
+
+        // 计算剩余的天数、小时数、分钟数和秒数
+        const days = Math.floor(difference / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((difference / (1000 * 60 * 60)) % 24);
+        const minutes = Math.floor((difference / 1000 / 60) % 60);
+        const seconds = Math.floor((difference / 1000) % 60);
+
+        // 更新倒计时显示
+        document.getElementById("days").textContent = days.toString().padStart(2, "0") + "天";
+        document.getElementById("hours").textContent = hours.toString().padStart(2, "0") + "小时";
+        document.getElementById("minutes").textContent = minutes.toString().padStart(2, "0") + "分钟";
+        document.getElementById("seconds").textContent = seconds.toString().padStart(2, "0") + "秒";
+    }
+
+    // 每秒更新一次倒计时
+    setInterval(updateCountdown, 1000);
+</script>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+    $(document).ready(function() {
+        var currentIndex = 0;
+        var slides = $('#slideshow img');
+        var slideCount = slides.length;
+
+        function showSlide(index) {
+            slides.removeClass('active');
+            slides.eq(index).addClass('active');
+        }
+
+        function nextSlide() {
+            currentIndex = (currentIndex + 1) % slideCount;
+            showSlide(currentIndex);
+        }
+
+        // 自动播放幻灯片
+        setInterval(nextSlide, 3000);
+
+        // 初始化显示第一张幻灯片
+        showSlide(currentIndex);
+    });
+</script>
+<script>
+    function createSnowflake() {
+        const snowflake = document.createElement('div');
+        snowflake.classList.add('snowflake');
+        snowflake.style.left = Math.random() * window.innerWidth + 'px';
+        snowflake.style.animationDuration = Math.random() * 5 + 5 + 's';
+        snowflake.style.opacity = Math.random();
+        snowflake.style.fontSize = Math.random() * 10 + 10 + 'px';
+
+        const randomColor = getRandomColor();
+        snowflake.style.backgroundColor = randomColor;
+
+        snowflake.innerHTML = '10生日快乐❤️/善良/认真/热心/劳苦功高/气质温婉/和煦/坚定/美丽/女神/自律/超会生活/自由/有想法'; // You can customize the snowflake symbol here
+
+        return snowflake;
+    }
+
+    function getRandomColor() {
+        const letters = '0123456789ABCDEF';
+        let color = '#';
+        for (let i = 0; i < 6; i++) {
+            color += letters[Math.floor(Math.random() * 16)];
+        }
+        return color;
+    }
+
+    function snowfall() {
+        const snowContainer = document.getElementById('snow-container');
+        const numSnowflakes = 50; // Adjust the number of snowflakes here
+
+        for (let i = 0; i < numSnowflakes; i++) {
+            const snowflake = createSnowflake();
+            snowContainer.appendChild(snowflake);
+        }
+    }
+
+    snowfall();
+</script>
+</body>
+</html>
